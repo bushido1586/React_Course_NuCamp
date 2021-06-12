@@ -9,8 +9,15 @@ class Student {
 class Bootcamp {
     constructor(name, level, students) {
         this.name = name;
-        this.level = level,
-            this.students = students
-    }
+        this.level = level;
+        this.students = [];
+    };
+
+    registerStudent(Student) {
+        if (!this.students.includes(Student.email)) {
+            this.students.push(Student);
+        }
+        return this.students;
+    };
 
 };
